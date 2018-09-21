@@ -1,0 +1,342 @@
+<app-header></app-header>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="/hr">HR</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Staff</li>
+  </ol>
+</nav>
+<section class="con_body" style="padding-top: 0px;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2 pr-0">
+				<div class="list-group">
+					<a [routerLink]="['/addstaff']" class="list-group-item active bg-dark-blue">Add New Staff</a>
+					<a [routerLink]="['/stafflist']" class="list-group-item list-group-item-action">Staff List</a>
+					<a [routerLink]="['/staffworklist']" class="list-group-item list-group-item-action">Staff Worklist</a>
+					<a [routerLink]="['/staffappraisal']" class="list-group-item list-group-item-action">Staff Appraisal</a>
+					<a [routerLink]="['/staffverification']" class="list-group-item list-group-item-action">Staff Verification</a>
+					<a [routerLink]="['/vehicalinfo']" class="list-group-item list-group-item-action">Vehical Information</a>
+				</div>
+			</div>
+			<div class="col-md-10 content-container">
+				<div class="card card-primary">
+					<div class="card-header card-header-primary bg-dark-blue">
+						<h6 class="card-title">Add New Staff</h6>
+					</div>
+					<div class="card-body">
+						<form class="form">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="form_heading">Basic Information</h6>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-12">
+															<div class="form-group">
+														<label>Staff Id</label>
+														<input type="text" name="Staffid" class="form-control" placeholder="Staff Id" id="Staff Id">
+													</div>
+												</div>
+												<div class="col-md-4">
+															<div class="form-group">
+														<label>First Name</label>
+														<input type="text" name="StaffFirstName" class="form-control" placeholder="First Name" id="StaffFirstName">
+													</div>
+												</div>
+												<div class="col-md-4">
+															<div class="form-group">
+														<label>Middle Name</label>
+														<input type="text" name="StaffMiddleName" class="form-control" placeholder="Staff Middle Name" id="StaffMiddleName">
+													</div>
+												</div>
+												<div class="col-md-4">
+															<div class="form-group">
+														<label>Last Name</label>
+														<input type="text" name="StaffLastName" class="form-control" placeholder="Staff last Name" id="StaffLastName">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Gender</label>
+														<select name="StaffGender" class="form-control">
+															<option value="m">Male</option>
+															<option value="f">Female</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Date Of Birth</label>
+														<input type="date" name="StaffDOB" class="form-control" placeholder="Date of Birth" id="StaffDOB">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Father Name</label>
+														<input type="text" name="StaffFatherName" class="form-control" placeholder="Staff Father Name" id="StaffFatherName">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Mother Name</label>
+														<input type="text" name="StaffMotherName" class="form-control" placeholder="Staff Mother Name" id="StaffMotherName">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Marital Status</label>
+														<select name="StaffMaritalStatus" class="form-control">
+															<option value="ST">Single</option>
+															<option value="m">Married</option>
+															<option value="d">Divorced</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Spouse Name</label>
+														<input type="text" name="StaffSpouseName" class="form-control" placeholder="Staff Spouse Name" id="StaffSpouseName">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Religion</label>
+														<select name="StaffMaritalStatus" class="form-control">
+														    <option value="Buddhism">Buddhism</option>
+														    <option value="Chinese traditional religion">Chinese traditional religion</option>
+														    <option value="Christianity">Christianity</option>
+														    <option value="Hinduism">Hinduism</option>
+														    <option value="Islam">Islam</option>
+														    <option value="Jainism">Jainism</option>
+														    <option value="Other">Other</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Category</label>
+														<input type="text" name="StaffCategory" class="form-control" placeholder="Staff Category" id="StaffCategory">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Caste</label>
+														<input type="text" name="StaffCaste" class="form-control" placeholder="Staff Caste" id="StaffCaste">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Higest Qualification</label>
+														<select name="StaffQualification" class="form-control">
+														    <option>Matric</option>
+														    <option>12th</option>
+														    <option>Graduate</option>
+														    <option>Post Graduate</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-4">
+															<div class="form-group">
+														<label>Recruitment Date</label>
+														<input type="date" name="StaffRecruitmentDate" class="form-control" id="StaffRecruitmentDate">
+													</div>
+												</div>
+												<div class="col-md-4">
+															<div class="form-group">
+														<label>Joining Date</label>
+														<input type="date" name="StaffJoiningDate" class="form-control" id="StaffJoiningDate">
+													</div>
+												</div>
+												<div class="col-md-4">
+															<div class="form-group">
+														<label>Exit Date</label>
+														<input type="date" name="StaffExitDate" class="form-control" id="StaffExitDate">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Exit Type</label>
+														<Select name="StaffExitType" class="form-control" id="StaffExitType">
+															<option>Option1</option>
+															<option>Option2</option>
+														</Select>
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Designation</label>
+														<input type="text" name="StaffDesignation" class="form-control" placeholder="Designation" id="StaffDesignation">
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Department</label>
+														<Select name="StaffDepartment" class="form-control" id="StaffDepartment">
+															<option>Accounts</option>
+															<option>Admin</option>
+															<option>HR</option>
+															<option>IT</option>
+															<option>Operation</option>
+														</Select>
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Grade</label>
+														<Select name="StaffGrade" class="form-control" id="StaffGrade">
+															<option>A+</option>
+															<option>A</option>
+															<option>B</option>
+															<option>C</option>
+															<option>D</option>
+														</Select>
+													</div>
+												</div>
+												<div class="col-md-6">
+															<div class="form-group">
+														<label>Profile Picture</label>
+														<input type="file" name="Staffprofilepic" class="form-control" id="Staffprofilepic">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							<div class="col-md-6">
+								<div class="card">
+									<div class="card-header">
+										<h6 class="form_heading">Address</h6>
+									</div>
+									<div class="card-body">
+										<div class="row">
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>ID Proof</label>
+													<select name="StaffIdProof" class="form-control">
+													    <option>Aadhaar Card</option>
+													    <option>Pan Card</option>
+													    <option>Driving Licence</option>
+													    <option>Voter Card</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Id Proof Number</label>
+													<input type="text" name="StaffIdProofNumber" class="form-control" placeholder="Staff Id Proof No." id="StaffIdProofNumber">
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Address Proof</label>
+													<select name="StaffAddressProof" class="form-control">
+													    <option>Aadhaar Card</option>
+													    <option>Pan Card</option>
+													    <option>Driving Licence</option>
+													    <option>Voter Card</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Id Proof Number</label>
+													<input type="text" name="StaffAddressProofNumber" class="form-control" placeholder="Staff Address Proof No." id="StaffAddressProofNumber">
+												</div>
+											</div>
+
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Has Driving Licence</label>
+													<select name="StaffDrivingLicence" class="form-control">
+													    <option>Yes</option>
+													    <option>No</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Driving Licence Number</label>
+													<input type="text" name="StaffDrivingLicenceNumber" class="form-control" placeholder="Staff DL No." id="StaffDrivingLicenceNumber">
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>DL Issue Authority</label>
+													<input type="text" name="DLIssueAuthority" class="form-control" placeholder="DL Issue Authority" id="DLIssueAuthority">
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>DL Expire Date</label>
+													<input type="date" name="DLExpireDate" class="form-control" id="DLExpireDate">
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Mobile No.</label>
+													<input type="text" name="StaffMobileNo" class="form-control" placeholder="Mobile No." id="StaffMobileNo">
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Home No.</label>
+													<input type="text" name="StaffhomeNo" class="form-control" placeholder="Home No." id="StaffhomeNo">
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Email id</label>
+													<input type="email" name="StaffEmailId" class="form-control" placeholder="Email ID" id="StaffEmailId">
+												</div>
+											</div>
+											<div class="col-md-6">
+														<div class="form-group">
+													<label>Personal Email id</label>
+													<input type="email" name="StaffPersonalEmailId" class="form-control" placeholder="Personal Email Id" id="StaffPersonalEmailId">
+												</div>
+											</div>
+											
+											<div class="col-md-4">
+														<div class="form-group">
+													<label>Have Vehicle</label>
+													<Select name="StaffVehicle" class="form-control" id="StaffVehicle">
+														<option>yes</option>
+														<option>No</option>
+													</Select>
+												</div>
+											</div>
+											<div class="col-md-4">
+														<div class="form-group">
+													<label>Have Vehicle</label>
+													<Select name="StaffVehicleType" class="form-control" id="StaffVehicleType">
+														<option>Bike</option>
+														<option>Car</option>
+													</Select>
+												</div>
+											</div>
+											<div class="col-md-4">
+														<div class="form-group">
+													<label>Vehicle No.</label>
+													<input type="text" name="StaffVehicleNo" class="form-control" placeholder="vehicle No." id="StaffVehicleNo">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 form_footer b-t-1">
+										<div class="float-right">
+											<button class="btn btn-primary btn-sm" type="Submit">Submit <i class="fa fa-arrow-right"></i></button>
+										</div>
+									</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

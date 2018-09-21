@@ -1,0 +1,297 @@
+
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="float-left">
+					<a class="navbar-brand" [routerLink]="['/dashboard']"><img src="../assets/img/logo/logo.png" style="max-width: 110px;"></a>
+				</div>
+				<div class="float-right">
+					<ul class="navbar-nav mr-auto" >
+						<li class="nav-item dropdown" ngbDropdown> 
+							<a class="nav-link dropdown-toggle user_details" href="javascript:;" id="dropdownBasic1" ngbDropdownToggle>
+								<span class="user_name">Sanjay Sharma</span>
+								<div class="user_profile_pic">
+									<img src="../assets/img/users/user1.jpg" class="img img-fluid circle">
+								</div>
+							</a>
+							<div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu user_details_dropdown">
+								<div class="user-card">
+									<div class="row">
+										<div class="col-8">
+											<p>Staff id: 17253</p>
+											<p>Branch Code: 123</p>
+										</div>
+										<div class="col-4">
+											<div class="user_pic">
+												<img src="../assets/img/users/user1.jpg" class="img img-fluid">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="nav-sub-menu">
+									<ul class="sub-nav">
+										<li>
+											<a [routerLink]="['/profile']" class="">
+												<i class="fa fa-user link_icon"></i>
+												<span class="menu-span">Profile</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/performace']">
+												<i class="far fa-chart-bar link_icon"></i>
+												<span class="menu-span">Performance</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/setting']">
+												<i class="fa fa-cogs link_icon"></i>
+												<span class="menu-span">Setting</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/logout']">
+												<i class="fa fa-sign-out-alt link_icon"></i>
+												<span class="menu-span">Logout</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>							
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu_bottom bg-dark-blue">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<nav class="navbar navbar-expand-lg" id="menu_bar">
+						<p class="text-right btn_p" style="width: 100%;">
+							<button class="navbar-toggler navbar-toggler-right" type="button" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_menu">
+							<span class="navbar-toggler-icon"></span>
+							</button>
+						</p>
+						<div ng-reflect-collapsed="true" class="collapse navbar-collapse" id="navbar_menu" [ngbCollapse]="isCollapsed">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item dropdown" ngbDropdown>
+									<a class="nav-link dropdown-toggle" href="javascript:;" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LOS</a>
+									<div class="dropdown-menu" ngbDropdownMenu>
+										<div class="nav-sub-menu">
+											<ul class="sub-nav">
+												<li>
+													<a [routerLink]="['/village-survey']">
+														<i class="fas fa-spinner link_icon"></i>
+														<span class="menu-span">Village Survey</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/addcentre']">
+														<i class="fas fa-signal link_icon"></i>
+														<span class="menu-span">center</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/cgt']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">CGT</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/grt']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">GRT</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/member']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Member</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/loanapplication']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Loan Application</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/loanapplication']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Loan Approval</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/loanapplication']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Loan Fee Collection</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/loanapplication']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Loan Process</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/loanapplication']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Loan Disbursement</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown" ngbDropdown>
+									<a class="nav-link dropdown-toggle" href="javascript:;" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">LMS</a>
+									<div class="dropdown-menu" ngbDropdownMenu>
+										<div class="nav-sub-menu">
+											<ul class="sub-nav">
+												<li>
+													<a [routerLink]="['/loanrepayment']">
+														<i class="fas fa-spinner link_icon"></i>
+														<span class="menu-span">Loan Repayment</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/forecloser']">
+														<i class="fas fa-signal link_icon"></i>
+														<span class="menu-span">Forecloser</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/arearswitching']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Arear Switching</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/canceldibursement']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Cancel Disbursement</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/advancedcollaction']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Advanced Collaction</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown" ngbDropdown>
+									<a class="nav-link dropdown-toggle" href="javascript:;" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Daily Process</a>
+									<div class="dropdown-menu" ngbDropdownMenu>
+										<div class="nav-sub-menu">
+											<ul class="sub-nav">
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fas fa-spinner link_icon"></i>
+														<span class="menu-span">Day Process </span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fas fa-signal link_icon"></i>
+														<span class="menu-span">Staff Attendance</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Credit Bureao</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown" ngbDropdown>
+									<a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Monitoring</a>
+									<div class="dropdown-menu" ngbDropdownMenu>
+										<div class="nav-sub-menu">
+											<ul class="sub-nav">
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Loan Utilization</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fa fa-user link_icon"></i>
+														<span class="menu-span">Surprise Centre Visit</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fas fa-thumbs-up link_icon"></i>
+														<span class="menu-span">Verify Attendance</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="nav-item dropdown" ngbDropdown>
+									<a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Activity</a>
+									<div class="dropdown-menu" ngbDropdownMenu>
+										<div class="nav-sub-menu">
+											<ul class="sub-nav">
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fa fa-check link_icon"></i>
+														<span class="menu-span">Verification</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fas fa-sync link_icon"></i>
+														<span class="menu-span">Reconnect to Client</span>
+													</a>
+												</li>
+												<li>
+													<a [routerLink]="['/dashboard']">
+														<i class="fas fa-bullseye link_icon"></i>
+														<span class="menu-span">Target</span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<div class="theme" [ngClass]="status ? 'open' : 'close'">
+	<div class="toggle_btn" (click)="clickEvent()">
+		<button class="btn btn-primary" type="btn"><i class="fa fa-cogs"></i></button>
+	</div>
+	<div class="theme_collaction">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="theme_container theme1">Theme1</div>
+			</div>
+			<div class="col-md-6">
+				<div class="theme_container theme2">Theme2</div>
+			</div>
+			<div class="col-md-6">
+				<div class="theme_container theme3">Theme3</div>
+			</div>
+			<div class="col-md-6">
+				<div class="theme_container theme4">Theme4</div>
+			</div>
+		</div>
+	</div>
+</div>

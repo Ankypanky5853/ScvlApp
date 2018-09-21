@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-md-12 header_section">
+    <h6>CGT Center List
+      <div class="float-right">
+        <button type="button" class="btn btn-sm btn-primary" (click)="toggle()"><i class="fa fa-plus"></i> Add New CGT</button>
+      </div>
+    </h6>
+    <p class="sub_title"><strong>Branch Name</strong> - Kota A [B001]</p>
+  </div>
+  <div class="col-md-12 header_section" *ngIf="show">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Village Name</label>
+          <select class="form-control ng-untouched ng-pristine ng-valid" name="villageName">
+            <option value="1">village 1</option>
+            <option value="2">Village 2</option>
+            <option value="1002">Village 3</option>
+            <option value="1005">Village 4</option>
+            <option value="1006">Village 5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Center name</label>
+          <select class="form-control ng-untouched ng-pristine ng-valid" name="CenterName">
+            <option value="1">Center 1</option>
+            <option value="2">Center 2</option>
+            <option value="1002">Center 3</option>
+            <option value="1005">Center 4</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>CGT Start Date</label>
+          <input class="form-control ng-untouched ng-pristine ng-valid" id="CGTStartDate" name="StartDate" type="date">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>CGT End Date</label>
+          <input class="form-control ng-untouched ng-pristine ng-valid" id="CGTEndDate" name="EndDate" type="date">
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="form-group">
+          <label>Staff / Employee</label>
+          <select class="form-control ng-valid ng-dirty ng-touched" name="Employee">
+            <option value="15989">Saurabh Tomar</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="text-right">
+          <button class="btn btn-default btn-sm" type="submit">
+            <i class="fa fa-times"></i> Clear
+          </button>
+          <button class="btn btn-success btn-sm" type="submit">
+            <i class="fa fa-save"></i> Add
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-striped text-center">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Centre Name</th>
+          <th>Village Name</th>
+          <th>Day1 Status</th>
+          <th>Day2 Status</th>
+          <th>Group Formation</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let centres of CentreData'>
+          <td>{{centres.id}}</td>
+          <td>{{centres.cname}}</td>
+          <td>{{centres.vname}}</td>
+          <td><a class="btn btn-small btn-primary" [routerLink]="['./../MembersList']"><i class="fa fa-plus"></i> Member Basic Details</a></td>
+          <td><button class="btn btn-small btn-primary" [routerLink]="['./../PassMembersList']" type="button"><i class="fa fa-plus"></i> Member Complete Details</button></td>
+          <td><button class="btn btn-small btn-primary" type="button" [routerLink]="['./../GroupCreation']"><i class="fa fa-start"></i> Create Group</button></td>
+          <td>
+            <a href="javascript:;" class="d_done">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="javascript:;" class="d_done text-danger">
+              <i class="fa fa-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

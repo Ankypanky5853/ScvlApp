@@ -1,0 +1,120 @@
+<app-header></app-header>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="/hr">HR</a></li>
+    <li class="breadcrumb-item active" aria-current="page">View Staff</li>
+  </ol>
+</nav>
+<section class="con_body" style="padding-top: 0px;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2 pr-0">
+				<div class="list-group">
+					<a [routerLink]="['/addstaff']" class="list-group-item list-group-item-action">Add New Staff</a>
+					<a [routerLink]="['/stafflist']" class="list-group-item list-group-item-action bg-dark-blue active">Staff List</a>
+					<a [routerLink]="['/staffworklist']" class="list-group-item list-group-item-action">Staff Worklist</a>
+					<a [routerLink]="['/staffappraisal']" class="list-group-item list-group-item-action">Staff Appraisal</a>
+					<a [routerLink]="['/staffverification']" class="list-group-item list-group-item-action">Staff Verification</a>
+					<a [routerLink]="['/vehicalinfo']" class="list-group-item list-group-item-action">Vehical Information</a>
+				</div>
+			</div>
+			<div class="col-md-10 content-container">
+				<div class="card">
+					<div class="card-header bg-dark-blue">
+						<h6 class="card-title">All Staff List</h6>
+					</div>
+					<div class="card-body">
+						<!-- <form class="filter_form mb-2">
+							<div class="row">
+								<div class="col-md-2">
+									<div class="form-group">
+										<label>Enter Name</label>
+										<input type="text" name="name" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label>Enter Staff Code</label>
+										<input type="text" name="name" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label>Select Designation</label>
+										<select class="form-control">
+											<option>Option1</option>
+											<option>Option1</option>
+											<option>Option3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label>Select Department</label>
+										<select class="form-control">
+											<option>Option1</option>
+											<option>Option1</option>
+											<option>Option3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<label>Select Location</label>
+										<select class="form-control">
+											<option>Option1</option>
+											<option>Option1</option>
+											<option>Option3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-2">
+									<div class="form-group">
+										<button class="btn btn-primary btn-sm inline_btn">Search</button>
+									</div>
+								</div>
+							</div>
+						</form> -->
+						<table class="table table-strip">
+							<thead>
+								<tr>
+									<th><div class="form-group checkbox"><input type="checkbox" name=""></div></th>
+									<th>Sr. No.</th>
+									<th>Staff Code</th>
+									<th>Staff Name</th>
+									<th>Designation</th>
+									<th>Department</th>
+									<th>Location</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr *ngFor="let staff of StaffList">
+									<td><div class="form-group checkbox"><input type="checkbox" name=""></div></td>
+
+									<td>{{staff.Staffid}}</td>
+									<td>{{staff.StaffCode}}</td>
+									<td>{{staff.staffName}}</td>
+									<td>{{staff.Designation}}</td>
+									<td>{{staff.Department}}</td>
+									<td>{{staff.Location}}</td>
+									<td><a class="d_done" href="javascriptvoid();"><i class="fa fa-edit"></i></a>
+										<a class="d_done text-danger" href="javascriptvoid();"><i class="fa fa-trash"></i></a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="float-right">
+									<ngb-pagination [collectionSize]="50" [(page)]="currentPage" size="sm"></ngb-pagination>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

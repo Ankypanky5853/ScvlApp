@@ -1,0 +1,249 @@
+<app-header></app-header>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/dashboard">Dashboard</a></li>
+    <li class="breadcrumb-item"><a href="/hr">HR</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Staff</li>
+  </ol>
+</nav>
+<section class="con_body" style="padding-top: 0px;">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2 pr-0">
+				<div class="list-group">
+					<a [routerLink]="['/addstaff']" class="list-group-item list-group-item-action">Baic Details</a>
+					<a [routerLink]="['/staffextradetails']" class="list-group-item  bg-dark-blue active">Extra Details</a>
+					<a [routerLink]="['/staffprofilepicture']" class="list-group-item list-group-item-action">Profile Picture</a>
+				</div>
+			</div> 
+			<div class="col-md-10 content-container">
+				<div class="card">
+					<div class="card-header bg-dark-blue">
+						<h6 class="card-title">Extra Information</h6>
+					</div>
+					<div class="card-body">
+						<form class="form">
+							<div class="row">
+								<div class="col-md-6 mb-3">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Contact Details</h6>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Emergency Contact No.</label>
+														<input type="text" name="EmergencyContactNumber" class="form-control" placeholder="Contact No." id="EmergencyContactNumber">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Relation</label>
+														<select class="form-control" name="Relation">
+															<option value="1">Father</option>
+															<option value="2">Mother</option>
+															<option value="3">Sister</option>
+															<option value="4">Brother</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Address</label>
+														<input type="text" name="Adrdess" class="form-control" placeholder="Adrdess" id="Adrdess">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Email Id</label>
+														<input type="text" name="EmailId" class="form-control" placeholder="Email" id="EmailId">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-3">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Identity Proof</h6>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Id Proof Type</label>
+														<select class="form-control" name="IdProofType">
+															<option>Aadhaar Card</option>
+															<option>Pan Card</option>
+															<option>Driving License</option>
+															<option>Rasan Card</option>
+															<option>Vote Card</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Id Proof No.</label>
+														<input type="text" class="form-control" name="IdProofNumber" id="IdProofNumber" placeholder="Id Proof Number">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Address Proof Type</label>
+														<select class="form-control" name="AddressProoftype">
+															<option>Aadhaar Card</option>
+															<option>Pan Card</option>
+															<option>Driving License</option>
+															<option>Rasan Card</option>
+															<option>Vote Card</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Address Proof No.</label>
+														<input type="text" class="form-control" name="AddressProofNumber" id="AddressProofNumber" placeholder="Proof Number">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-3">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Joining Details</h6>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label>Confirmation Status</label>
+														<select class="form-control" name="ConfirmationStatus">
+															<option>Yes</option>
+															<option>No</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Probation Due Date</label>
+														<input type="date" name="ProbationDueDate" class="form-control" id="ProbationDueDate">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Effective Probation Date</label>
+														<input type="date" name="EffectiveProbationDate" class="form-control" id="EffectiveProbationDate">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Confirmation Due Date</label>
+														<input type="date" name="ConfirmationDueDate" class="form-control" id="ConfirmationDueDate">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Effective Confirmation Date</label>
+														<input type="date" name="EffectiveConfirmDate" class="form-control" id="EffectiveConfirmDate">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+								<div class="col-md-6 mb-3">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Driving Details</h6>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Has Driving License</label>
+														<select class="form-control" name="HasDrivingLicense">
+															<option>Yes</option>
+															<option>No</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>DL Issue Authority</label>
+														<select class="form-control" name="Relation">
+															<option value="1">Option1</option>
+															<option value="2">Option2</option>
+															<option value="3">Option3</option>
+															<option value="4">Option4</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Dl Expire Date</label>
+														<input type="date" name="DlExpireDate" class="form-control" id="DlExpireDate">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Has Motorization</label>
+														<select class="form-control" name="HasDrivingLicense">
+															<option>Yes</option>
+															<option>No</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Vehicle Type</label>
+														<select class="form-control" name="VehicleType">
+															<option>Yes</option>
+															<option>No</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label>Vehicle No.</label>
+														<input type="text" name="VehicleNumber" class="form-control" id="VehicleNumber">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-3">
+									<div class="card">
+										<div class="card-header">
+											<h6 class="card-title">Profile Picture</h6>
+										</div>
+										<div class="card-body">
+											<div class="row">
+												<div class="col-md-12">
+													<div class="form-group">
+														<label>Profile Picture</label>
+														<input type='file' (change)="onSelectFile($event)" class="form-control">
+														<img [src]="url" height="100" align="center" class="m-t-10">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-12 mt-3">
+									<div class="float-right">
+										<button class="btn btn-primary btn-sm" type="Submit">Submit</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

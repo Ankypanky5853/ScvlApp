@@ -1,0 +1,162 @@
+<app-header></app-header>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+    <li class="breadcrumb-item"><a [routerLink]="['/operations']">Operations</a></li>
+    <li class="breadcrumb-item"><a [routerLink]="['/jlg']">JLG</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Loan Fees Collection</li>
+  </ol>
+</nav>
+<section class="con_body">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="list-group">
+          <h6 class="bg-dark-blue">LOS</h6>
+          <a [routerLink]="['/village-survey']" class="list-group-item list-group-item-action">Village Survey</a>
+          <a [routerLink]="['/center']" class="list-group-item list-group-item-action">Centre</a>
+          <a [routerLink]="['/cgt']" class="list-group-item list-group-item-action ">CGT</a>
+          <a [routerLink]="['/grt']" class="list-group-item list-group-item-action">GRT</a>
+          <a [routerLink]="['/member']" class="list-group-item list-group-item-action">Member</a>
+          <a [routerLink]="['/loanApplication']" class="list-group-item list-group-item-action">Loan Application</a>
+          <a [routerLink]="['/loanprocess']" class="list-group-item list-group-item-action">Loan Process</a>
+          <a [routerLink]="['/loanapproval']" class="list-group-item list-group-item-action">Loan Approval</a>
+          <a [routerLink]="['/loanFeesCollection']" class="list-group-item list-group-item-action">Loan Fees
+            Collection</a>
+          <a [routerLink]="['/disbursement']" class="list-group-item list-group-item-action active">Disbursement</a>
+        </div>
+      </div>
+      <div class="col-md-10 content-container">
+        <div class="card">
+          <div class="card-header bg-dark-blue">
+            <h6 class="card-title">
+              Loan Fee Collection
+            </h6>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="float-right m-b-10">
+                  <button type="button" class="btn btn-primary btn-sm"><i class="fa fa-print"></i> Print Loan Agreement</button>
+                  <button type="button" class="btn btn-success btn-sm"><i class="fa fa-print"></i> Print
+                    DPN/Declaration/Recipet</button>
+                  <button type="submit" class="btn btn-primary btn-sm" (click)="toggle()"><i class="fa fa-filter"></i>
+                    Filter</button>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Branch Code</label>
+                      <input type="text" class="form-control" name="BranchCode" readonly value="B001" />
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Branch Name</label>
+                      <input type="text" class="form-control" name="BranchName" readonly value="Bilaspur" />
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Meeting Date</label>
+                      <input type="date" class="form-control" name="MeetingDate" readonly value="2018-07-22" />
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <label>Meeting Day</label>
+                      <input type="text" class="form-control" name="MeetingDay" readonly value="Monday" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <form *ngIf="show" style="width:100%; float:left;">
+                      <div class="row m-b-15 p-b-15 b-b-1">
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>Select Center</label>
+                            <select name="CenterList" class="form-control" id="CenterList">
+                              <option value="1">Abc C001</option>
+                              <option value="2">Abc C002</option>
+                              <option value="3">Abc C003</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>Select Client</label>
+                            <select name="ClientList" class="form-control" id="ClientList">
+                              <option value="1">Anita Devi</option>
+                              <option value="2">Babita Kumari</option>
+                              <option value="3">Dipika Yadav</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <label>Enter Value</label>
+                            <input type="text" name="clientdatafilter" class="form-control" id="clientdatafilter">
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <button type="submit" class="btn inline_btn btn-success btn-sm"><i class="fa fa-search"></i>
+                              Search</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <table class="table table-responsive table-striped" style="width: 100%;">
+                      <thead class="">
+                        <tr>
+                          <th class="text-center">Center Code</th>
+                          <th class="text-center">Client Code</th>
+                          <th class="text-center">Client Name</th>
+                          <th class="text-center">Loan Code</th>
+                          <th class="text-center">Approval Date</th>
+                          <th class="text-center">Validity</th>
+                          <th class="text-center">Approval Amount</th>
+                          <th class="text-center">Loan Status</th>
+                          <th class="text-center">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody class="">
+                        <tr *ngFor="let client of Clientdata">
+                          <td class="text-center">{{client.center}}</td>
+                          <td class="text-center">{{client.code}}</td>
+                          <td class="text-center">{{client.name}}</td>
+                          <td class="text-center">{{client.loancode}}</td>
+                          <td class="text-center">{{client.approvaldate}}</td>
+                          <td class="text-center">{{client.validity}}</td>
+                          <td class="text-center">{{client.approvalamount}}</td>
+                          <td class="text-center">{{client.docsstatus}}</td>
+                          <td class="text-center">
+                            <div class="checkbox checkbox-primary">
+                              <input type="checkbox" id="{{client.loancode}}">
+                              <label for="{{client.loancode}}"></label>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col-md-12">
+                    <hr>
+                    <div class="float-right">
+                      <button class="btn btn-sm btn-success">Save</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

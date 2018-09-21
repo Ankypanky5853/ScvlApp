@@ -1,0 +1,43 @@
+<div class="row">
+  <div class="col-md-12 header_section">
+    <div class="float-right">
+      <button class="btn btn-primary btn-sm" type="button" [routerLink]="['./../VillageDetails']"><i class="fa fa-plus"></i>
+        Add New</button>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-responsive-sm table-striped" style="width: 100%;">
+      <thead class="">
+        <tr>
+          <th class="text-center">Village Code</th>
+          <th class="text-center">Village Name</th>
+          <th class="text-center">Post Office</th>
+          <th class="text-center">Block</th>
+          <th class="text-center">Pincode</th>
+          <th class="text-center">Status</th>
+          <th class="text-center">Approved By</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody class="">
+        <tr *ngFor="let villageSurvey of villageSurvey">
+          <td class="text-center">{{villageSurvey.Code}}</td>
+          <td class="text-center">{{villageSurvey.Name}}</td>
+          <td class="text-center">{{villageSurvey.PostOffice}}</td>
+          <td class="text-center">{{villageSurvey.Block}}</td>
+          <td class="text-center">{{villageSurvey.Pincode}}</td>
+          <td class="text-center" [ngClass]="{'text-success': villageSurvey.Status=='Complete', 'text-danger': villageSurvey.Status=='Pending'}">{{villageSurvey.Status}}</td>
+          <td class="text-center">{{villageSurvey.Approvedby}}</td>
+          <td class="text-center">
+            <a [routerLink]="['./../VillageDetails']" class="d_none">
+              <i class="fa fa-edit fs-12"></i>
+            </a>
+            <a href="javascript:;" class="text-danger d_none">
+              <i class="fa fa-trash-alt fs-12"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

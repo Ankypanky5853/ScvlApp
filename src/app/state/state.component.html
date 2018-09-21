@@ -1,0 +1,148 @@
+<app-header></app-header>
+<section class="con_body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="mb-3 page-heading">State</h4>
+			</div>
+			<div class="col-md-2">
+				<div class="list-group department_filter">
+					<div class="heading">Demo </div>
+					<a [routerLink]="['/Country']" class="list-group-item list-group-item-action">Country</a>
+					<a [routerLink]="['/Zone']" class="list-group-item list-group-item-action">Zone</a>
+					<a [routerLink]="['/State']" class="list-group-item list-group-item-action active">State</a>
+					<a [routerLink]="['/District']" class="list-group-item list-group-item-action">District</a>
+					<a [routerLink]="['/Insurance']" class="list-group-item list-group-item-action">Area</a>
+					<a [routerLink]="['/Branch']" class="list-group-item list-group-item-action">Branch</a>
+					<a [routerLink]="['/Center']" class="list-group-item list-group-item-action">Center</a>
+				</div>
+			</div>
+			<div class="col-md-10 content-container">
+				<div class="card">
+					<div class="card-body">
+						<form class="mb-3">
+							<div class="row">
+								<div class="col-md-12">
+									
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>Select Country</label>
+										<select name="" class="form-control">
+											<option>Country 1</option>
+											<option>Country 2</option>
+											<option>Country 3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>Select Zone</label>
+										<select name="" class="form-control">
+											<option>Zone 1</option>
+											<option>Zone 2</option>
+											<option>Zone 3</option>
+										</select>
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>Enter State</label>
+										<input type="text" name="" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<button type="Search" class="btn btn-primary btn-sm inline_btn"><i class="fa fa-search"></i> Search</button>
+										<div class="float-right">
+											<button class="btn btn-success btn-sm inline_btn " (click)="openLg(create_new)"><i class="fa fa-plus"></i> Create New</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+
+						<div class="">
+							<table class="table table-responsive table-striped" style="width: 100%;  display: table;">
+									<thead class="">
+										<tr>
+											<th class="text-center">State Id</th>
+											<th class="text-center">State Name</th>
+											<th class="text-center">Zone</th>
+											<th class="text-center">Country</th>
+											<th class="text-center">Action</th>
+										</tr>
+									</thead>
+									<tbody class="">
+										<tr *ngFor="let mfi of Statedata">
+											<td class="text-center">{{mfi.Id}}</td>
+											<td class="text-center">{{mfi.State}}</td>
+											<td class="text-center">{{mfi.Zone}}</td>
+											<td class="text-center">{{mfi.Country}}</td>
+											<td class="text-center">
+												<a (click)="openLg(create_new)" class="d_none text-primary" >
+													<i class="fa fa-edit"></i>
+												</a>
+												<a href="javascript:;" class="d_none text-danger">
+													<i class="fa fa-trash-alt"></i>
+												</a> 
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<ng-template #create_new let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title">create New</h4>
+		<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>ABC</label>
+					<input type="text" name="Country Name" class="form-control" id="Country" placeholder="Search" autofocus="">
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>Select Department</label>
+					<select name="department" class="form-control">
+						<option>Accounts</option>
+						<option>Admin</option>
+						<option>Audit</option>
+						<option>HR</option>
+						<option>Accounts</option>
+						<option>Verification</option>
+						<option>IT</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>Select Designation</label>
+					<select name="designation" class="form-control">
+						<option>Sr. Manager</option>
+						<option>Asst. Manager</option>
+						<option>Sr. Excutive</option>
+						<option>Excutive</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-dark btn-sm" (click)="c('Close click')">Close</button>
+		<button type="button" class="btn btn-primary btn-sm">Search</button>
+	</div>
+</ng-template>

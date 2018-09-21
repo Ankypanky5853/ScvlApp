@@ -1,0 +1,30 @@
+.dashboard_header{
+    width: 200px;
+    position: absolute;
+    background: #000;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+.dashboard_header .logo{
+    width: 100%;
+    padding: 30px 10px 10px 10px;
+}
+.dashboard_header .nav{
+    width: 100%;
+    float: left;
+    clear: none;
+}
+.dashboard_header .nav ul{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+.dashboard_header .nav ul li{
+    width: 100%;
+    text-align: center;
+    padding: 8px 16px;
+}
+.dashboard_header .nav ul li a{
+    color: #fff;
+}

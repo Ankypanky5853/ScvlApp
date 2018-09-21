@@ -1,0 +1,131 @@
+.main_btn{
+	width: 100%;
+	float: left;
+	clear: none;
+	display: inline-block;
+	color: #fff !important;
+}
+.main_btn a{
+	width: 100%;
+	height: 100%;
+	display: table;
+	color: #fff;
+	padding: 3.3rem 0.75rem;
+	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+}
+.main_btn a .grid_icon{
+	font-size: 35px;
+}
+.main_btn a:hover{
+	text-decoration: none;
+}
+.main_btn .m-nav-grid__text, .main_btn .grid_icon{
+	color: #fff !important;
+	display: block;
+}
+.main_btn .grid_icon{
+	line-height: 35px;
+	/*font-size: 35px;*/
+}
+.btn-1{
+	background: #1abc9c;
+}
+.btn-1:hover .grid_item{
+	background: #16a085 !important
+}
+.btn-2{
+	background: #2ecc71;
+}
+.btn-2:hover .grid_item{
+	background: #27ae60 !important;
+}
+.btn-3{
+	background: #3498db;
+}
+.btn-3:hover .grid_item{
+	background: #2980b9 !important;
+}
+.btn-4{
+	background: #9b59b6;
+}
+.btn-4:hover .grid_item{
+	background: #8e44ad !important;
+}
+.btn-5{
+	background: #34495e;
+}
+.btn-5:hover .grid_item{
+	background: #2c3e50 !important;
+}
+.btn-6{
+	background: #567C73;
+}
+.btn-6:hover .grid_item{
+	background: #486860 !important;
+}
+.btn-7{
+	background: #00B7C3;
+}
+.btn-7:hover .grid_item{
+	background: #038387 !important;
+}
+.btn-8{
+	background: #68768A;
+}
+.btn-8:hover .grid_item{
+	background: #515C6B !important;
+}
+.btn-9{
+	background: #EF6950;
+}
+.btn-9:hover .grid_item{
+	background: #D13438 !important;
+}
+.btn-10{
+	background: #68768A;
+}
+.btn-10:hover .grid_item{
+	background: #515C6B !important;
+}
+@media (min-width: 576px) { 
+.main_btn{
+	width: 50%;
+	float: left;
+	clear: none;
+	display: inline-block;
+	color: #fff !important;
+}
+ }
+
+@media (min-width: 768px) {
+.main_btn{
+	width: 50%;
+	float: left;
+	clear: none;
+	display: inline-block;
+	color: #fff !important;
+}
+ }
+
+@media (min-width: 992px) { 
+.main_btn{
+	width: 20%;
+	float: left;
+	clear: none;
+	display: inline-block;
+	color: #fff !important;
+}
+}
+
+@media (min-width: 1200px) {
+	.main_btn{
+	width: 20%;
+	float: left;
+	clear: none;
+	display: inline-block;
+	color: #fff !important;
+}
+
+}

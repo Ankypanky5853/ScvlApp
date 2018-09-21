@@ -1,0 +1,71 @@
+<app-header></app-header>
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+	    <li class="breadcrumb-item"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+	    <li class="breadcrumb-item"><a [routerLink]="['/operations']">Operations</a></li>
+	    <li class="breadcrumb-item"><a [routerLink]="['/los']">LOS</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Loan Applications</li>
+	</ol>
+</nav>
+<section class="con_body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="list-group">
+					<h6 class="bg-dark-blue">LOS</h6>
+					<a [routerLink]="['/village-survey']" class="list-group-item list-group-item-action">Village Survey</a>
+					<a [routerLink]="['/center']" class="list-group-item list-group-item-action">Centre</a>
+					<a [routerLink]="['/cgt']" class="list-group-item list-group-item-action">CGT</a>
+					<a [routerLink]="['/grt']" class="list-group-item list-group-item-action">GRT</a>
+					<a [routerLink]="['/member']" class="list-group-item list-group-item-action">Member</a>
+					<a [routerLink]="['/loanApplication']" class="list-group-item list-group-item-action">Loan Application</a>
+					<a [routerLink]="['/loanprocess']" class="list-group-item list-group-item-action">Loan Process</a>
+					<a [routerLink]="['/loanapproval']" class="list-group-item list-group-item-action active">Loan Approval</a>
+					<a [routerLink]="['/loanFeesCollection']" class="list-group-item list-group-item-action">Loan Fees Collection</a>
+					<a [routerLink]="['/disbursement']" class="list-group-item list-group-item-action">Disbursement</a>
+				</div>
+			</div>
+			<div class="col-md-10 content-container">
+				<div class="card">
+					<div class="card-header bg-dark-blue">
+						<h6 class="card-title">Loan Applications</h6>
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-12">
+								<table class="table table-stripped">
+									<thead>
+										<tr>
+											<th>Sr. No.</th>
+											<th>Client Name</th>
+											<th>Client Code</th>
+											<th>Branch Name</th>
+											<th>Center</th>
+											<th>Amount Request</th>
+											<th>Time</th>
+											<th>Action</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr *ngFor='let LoanApplications of LoanApplications'>
+											<td>{{LoanApplications.id}}</td>
+											<td>{{LoanApplications.name}}</td>
+											<td>{{LoanApplications.code}}</td>
+											<td>{{LoanApplications.branch}}</td>
+											<td>{{LoanApplications.center}}</td>
+											<td>{{LoanApplications.amount}}</td>
+											<td>{{LoanApplications.time}}</td>
+											<td>
+												<a [routerLink]="['/loanApplication/id']" class="d_done">Next</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

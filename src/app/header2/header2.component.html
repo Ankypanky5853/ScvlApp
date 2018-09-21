@@ -1,0 +1,259 @@
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="float-left">
+					<a class="navbar-brand" [routerLink]="['/dashboard']"><img src="../assets/img/logo/logo.png" style="max-width: 130px;"></a>
+				</div>
+				<div class="float-right">
+					<ul class="navbar-nav mr-auto" >
+						<li class="nav-item dropdown" ngbDropdown > 
+							<a class="nav-link dropdown-toggle user_details" href="javascript:;" id="dropdownBasic1" ngbDropdownToggle>
+								<span class="user_name">Sanjay Sharma <span class="text-danger">Branch 123</span></span>
+								<div class="user_profile_pic">
+
+									<img src="../assets/img/users/user1.jpg" class="img img-fluid circle">
+								</div>
+							</a>
+							<div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu user_details_dropdown">
+								<div class="user-card">
+									<div class="row">
+										<div class="col-md-8">
+											<p>Sanjay Sharma</p>
+											<p>Branch Code  123</p>
+										</div>
+										<div class="col-md-4">
+											<div class="user_pic">
+												<img src="../assets/img/users/user1.jpg" class="img img-fluid">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="nav-sub-menu">
+									
+									<ul class="sub-nav">
+										<li>
+											<a [routerLink]="['/profile']">
+												<i class="fa fa-user link_icon"></i>
+												<span class="menu-span">Profile</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/performace']">
+												<i class="far fa-chart-bar link_icon"></i>
+												<span class="menu-span">Performance</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/setting']">
+												<i class="fa fa-cogs link_icon"></i>
+												<span class="menu-span">Setting</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/logout']">
+												<i class="fa fa-sign-out-alt link_icon"></i>
+												<span class="menu-span">Logout</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>							
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu_bottom">
+		<nav class="navbar navbar-expand-lg" id="menu_bar">
+			<button class="navbar-toggler navbar-toggler-right" type="button" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbar_menu">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbar_menu" [ngbCollapse]="isCollapsed">
+				<p>
+					<button class="close_btn">X</button>
+				</p>
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item dropdown" ngbDropdown>
+						<a class="nav-link" href="javascript:;" ngbDropdownToggle>JLG</a>
+						<div ngbDropdownMenu class="dropdown-menu">
+							<div class="nav-sub-menu">
+								<ul class="sub-nav">
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Member</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown" ngbDropdown>
+						<a class="nav-link dropdown-toggle" href="javascript:;" ngbDropdownToggle data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+						<div class="dropdown-menu" ngbDropdownMenu>
+							<div class="nav-sub-menu">
+								<ul class="sub-nav">
+									<li class="nav-item dropdown">
+										<a class="nav-sub-link">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+											<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+										</a>
+										<div class="dropdown_sub_menu">
+											<span class="span"></span>
+											<div class="nav-sub-menu">
+												<ul class="sub-nav">
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+									<li class="nav-item dropdown">
+										<a class="nav-sub-link">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+											<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+										</a>
+										<div class="dropdown_sub_menu">
+											<span class="span"></span>
+											<div class="nav-sub-menu">
+												<ul class="sub-nav">
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+													<li>
+														<a [routerLink]="['/dashboard']">
+															<i class="fa fa-user link_icon"></i>
+															<span class="menu-span">Action</span>
+															<i class="m-menu__hor-arrow fa fa-angle-right"></i>
+														</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>										
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="nav-item dropdown" ngbDropdown>
+						<a class="nav-link dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Dropdowndd</a>
+						<div class="dropdown-menu" ngbDropdownMenu>
+							<div class="nav-sub-menu">
+								<ul class="sub-nav">
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+									<li>
+										<a [routerLink]="['/dashboard']">
+											<i class="fa fa-user link_icon"></i>
+											<span class="menu-span">Action</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>

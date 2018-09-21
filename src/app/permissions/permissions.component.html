@@ -1,0 +1,399 @@
+<app-header></app-header>
+<section class="con_body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="mb-3 page-heading">Permissions</h4>
+			</div>
+			<div class="col-md-2">
+				<div class="list-group department_filter">
+					<a pageScroll [routerLink]="['/permission']" href="#hr" class="list-group-item active">Accounts</a>
+					<a href="#admin" class="list-group-item list-group-item-action">Admin</a>
+					<a href="#grivance" class="list-group-item list-group-item-action">Grivance</a>
+					<a href="#hr" class="list-group-item list-group-item-action">Human Resources</a>
+					<a href="#insurance" class="list-group-item list-group-item-action">Insurance</a>
+					<a href="#it" class="list-group-item list-group-item-action">IT</a>
+					<a href="/" class="list-group-item list-group-item-action">Disbursement</a>
+				</div>
+			</div>
+			<div class="col-md-10 content-container">
+				<div class="card">
+					<div class="card-body">
+						<form class="mb-3">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="float-right">
+										<a class="btn btn-primary btn-sm mb-1"><i class="fa fa-plus"></i> Create New</a>
+									</div>
+								</div>
+
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>SearchBox 1</label>
+										<input type="text" name="" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>SearchBox 1</label>
+										<input type="text" name="" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>SearchBox 1</label>
+										<input type="text" name="" class="form-control">
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group">
+										<button type="Search" class="btn btn-primary btn-sm inline_btn"><i class="fa fa-search"></i> Search</button>
+									</div>
+								</div>
+							</div>
+						</form>
+						<div class="department_permissions">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="heading">
+										<h6>Admin</h6>
+									</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="Admin1" type="checkbox" checked>
+					            		<label for="Admin1">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="Admin2" type="checkbox" checked>
+					            		<label for="Admin2">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					    			</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="Admin3" type="checkbox" checked>
+					            		<label for="Admin3">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="Admin4" type="checkbox">
+					            		<label for="Admin4">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+					    		</div>
+					    		<div class="col-md-3">
+									<div class="heading">
+										<h6>Human Resources</h6>
+									</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="hr1" type="checkbox" checked>
+					            		<label for="hr1">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="hr2" type="checkbox" checked>
+					            		<label for="hr2">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					    			</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="hr3" type="checkbox" checked>
+					            		<label for="hr3">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="hr4" type="checkbox">
+					            		<label for="hr4">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+					    		</div>
+					    		<div class="col-md-3">
+									<div class="heading">
+										<h6>Accounts</h6>
+									</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="accounts1" type="checkbox" checked>
+					            		<label for="accounts1">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="accounts2" type="checkbox" checked>
+					            		<label for="accounts2">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					    			</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="accounts3" type="checkbox" checked>
+					            		<label for="accounts3">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="accounts4" type="checkbox">
+					            		<label for="accounts4">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+					    		</div>
+					    		<div class="col-md-3">
+									<div class="heading">
+										<h6>Insurance</h6>
+									</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="insurance5" type="checkbox" >
+					            		<label for="insurance5">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="insurance6" type="checkbox">
+					            		<label for="insurance6">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span>
+					            		</label>
+					    			</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="insurance7" type="checkbox" checked>
+					            		<label for="insurance7">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+									<div class="checkbox checkbox-primary">
+					            		<input id="insurance8" type="checkbox">
+					            		<label for="insurance8">Permission Name
+					            		<span class="permission_detail">This permission allowed user to change the data</span></label>
+					        		</div>
+					    		</div>
+					    	</div>
+					    </div>
+					    <div class="row">
+					    	<div class="col-md-12">
+					    		<div class="float-right">
+					    			<button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-save"></i> Save</button>
+					    		</div>
+					    	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<ng-template #content let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title">Set Permissions</h4>
+		<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+			<div class="col-md-3">
+				<h6>Accounts</h6>
+				<div class="checkbox checkbox-primary">
+		            <input id="checkbox1" type="checkbox">
+		            <label for="checkbox1">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox2" type="checkbox">
+		            <label for="checkbox2">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox3" type="checkbox">
+		            <label for="checkbox3">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox4" type="checkbox">
+		            <label for="checkbox4">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox5" type="checkbox">
+		            <label for="checkbox5">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox6" type="checkbox">
+		            <label for="checkbox6">
+		                Success
+		            </label>
+		        </div>
+		    </div>
+		    <div class="col-md-3">
+				<h6>Admin</h6>
+				<div class="checkbox checkbox-primary">
+		            <input id="checkbox7" type="checkbox">
+		            <label for="checkbox7">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox8" type="checkbox">
+		            <label for="checkbox8">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox9" type="checkbox">
+		            <label for="checkbox9">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox10" type="checkbox">
+		            <label for="checkbox10">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox11" type="checkbox">
+		            <label for="checkbox11">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox12" type="checkbox">
+		            <label for="checkbox12">
+		                Success
+		            </label>
+		        </div>
+		    </div>
+		    <div class="col-md-3">
+				<h6>Insurance</h6>
+				<div class="checkbox checkbox-primary">
+		            <input id="checkbox13" type="checkbox">
+		            <label for="checkbox13">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox14" type="checkbox">
+		            <label for="checkbox14">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox15" type="checkbox">
+		            <label for="checkbox15">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox16" type="checkbox">
+		            <label for="checkbox16">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox17" type="checkbox">
+		            <label for="checkbox17">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox18" type="checkbox">
+		            <label for="checkbox18">
+		                Success
+		            </label>
+		        </div>
+		    </div>
+		    <div class="col-md-3">
+				<h6>HR</h6>
+				<div class="checkbox checkbox-primary">
+		            <input id="checkbox19" type="checkbox">
+		            <label for="checkbox19">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox20" type="checkbox">
+		            <label for="checkbox20">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox21" type="checkbox">
+		            <label for="checkbox21">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox22" type="checkbox">
+		            <label for="checkbox22">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox23" type="checkbox">
+		            <label for="checkbox23">
+		                Primary
+		            </label>
+		        </div>
+		        <div class="checkbox checkbox-primary">
+		            <input id="checkbox24" type="checkbox">
+		            <label for="checkbox24">
+		                Success
+		            </label>
+		        </div>
+		    </div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-dark" (click)="c('Close click')">Close</button>
+		<button type="button" class="btn btn-success">Save</button>
+	</div>
+</ng-template>
+
+<ng-template #create_new let-c="close" let-d="dismiss">
+	<div class="modal-header">
+		<h4 class="modal-title">create New</h4>
+		<button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+		  <span aria-hidden="true">&times;</span>
+		</button>
+	</div>
+	<div class="modal-body">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>ABC</label>
+					<input type="text" name="Country Name" class="form-control" id="Country" placeholder="Search" autofocus="">
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>Select Department</label>
+					<select name="department" class="form-control">
+						<option>Accounts</option>
+						<option>Admin</option>
+						<option>Audit</option>
+						<option>HR</option>
+						<option>Accounts</option>
+						<option>Verification</option>
+						<option>IT</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>Select Designation</label>
+					<select name="designation" class="form-control">
+						<option>Sr. Manager</option>
+						<option>Asst. Manager</option>
+						<option>Sr. Excutive</option>
+						<option>Excutive</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-dark" (click)="c('Close click')">Close</button>
+		<button type="button" class="btn btn-primary">Search</button>
+	</div>
+</ng-template>

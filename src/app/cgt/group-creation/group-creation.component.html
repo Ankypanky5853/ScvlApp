@@ -1,0 +1,100 @@
+<div class="row">
+  <div class="col-md-12 header_section">
+    <h6>Group Create</h6>
+  </div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title">Members List</h6>
+          </div>
+          <div class="card-body">
+            <div class="member_list">
+              <ul>
+                <li *ngFor='let member of List1;let i = index' draggable="true" [ngClass]="{'selected':class1[i]===true}">
+                    <div class="checkbox checkbox-primary">
+                      <input id="{{member.MemberCode}}" (change)="Shift($event,member,i,'Left')" name="abc" type="checkbox">
+                      <label for="{{member.MemberCode}}">Name : {{member.MemberName}} [{{member.MemberCode}}]</label>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-sm btn-success" (click)="MoveLeft()">Move to Group <i class="fas fa-arrow-right"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <div class="form-group">
+            <button type="button" class="btn btn-block btn-success" (click)="MoveLeft()"><i class="fas fa-arrow-right"></i></button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-block btn-primary" (click)="MoveRight()"><i class="fas fa-arrow-left"></i></button>
+        </div>
+        </div>
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title">Group List</h6>
+          </div>
+          <div class="card-body">
+            <div class="member_list">
+              <ul>
+                <li *ngFor='let member of List2;let i = index' draggable="true" [ngClass]="{'selected':class2[i]===true}">
+                    <div class="checkbox checkbox-primary">
+                      <input id="{{member.MemberCode}}" (change)="Shift($event,member,i,'Right')" type="checkbox">
+                      <label for="{{member.MemberCode}}">Name : {{member.MemberName}} [{{member.MemberCode}}]</label>
+                    </div>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-sm btn-success">Save Group</button>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title">Group List</h6>
+          </div>
+          <div class="card-body">
+            <div class="member_list">
+              <ul>
+                <li *ngFor='let member of tmplist1;let i = index'>
+                  <div class="checkbox checkbox-primary">
+                    <input id="{{member.MemberCode}}" type="checkbox">
+                    <label for="{{member.MemberCode}}">Name : {{member.MemberName}} [{{member.MemberCode}}]</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-header">
+            <h6 class="card-title">Group List</h6>
+          </div>
+          <div class="card-body">
+            <div class="member_list">
+              <ul>
+                <li *ngFor='let member of tmplist2;let i = index'>
+                  <div class="checkbox checkbox-primary">
+                    <input id="{{member.MemberCode}}" type="checkbox">
+                    <label for="{{member.MemberCode}}">Name : {{member.MemberName}} [{{member.MemberCode}}]</label>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<dual-list [source]="source" [(destination)]="target" height="150px"></dual-list>

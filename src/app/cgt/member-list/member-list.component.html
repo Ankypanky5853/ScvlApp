@@ -1,0 +1,50 @@
+<div class="row">
+  <div class="col-md-12 header_section">
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <h6>Members List </h6>
+        <p class="sub_title"><strong>Center Name</strong> - Kota AB [B001:002]</p>
+      </div>
+      <div class="col-md-6 text-right">
+        <p class="sub_title"><strong>Branch Name</strong> - Kota A [B001]</p>
+        <p class="sub_title"><strong>CGT Period</strong> - Sep 7, 2018 to Sep 21, 2018</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12 p-b-20 text-right">
+    <button type="button" [routerLink]="['./../AddMember']" class="btn btn-sm btn-primary"><i class="fa fa-plus"></i> Add New Member</button>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-striped text-center">
+      <thead>
+        <tr>
+          <th>Member Code</th>
+          <th>Member Name</th>
+          <th>Father Name</th>
+          <th>Centre Name</th>
+          <th>Village Name</th>
+          <th>Branch Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let Members of MemberData'>
+          <td>{{Members.code}}</td>
+          <td>{{Members.name}}</td>
+          <td>{{Members.father}}</td>
+          <td>{{Members.centre}}</td>
+          <td>{{Members.village}}</td>
+          <td>{{Members.branch}}</td>
+          <td>
+            <a href="javascript:;" class="d_done">
+              <i class="fa fa-edit"></i>
+            </a>
+            <a href="javascript:;" class="d_done text-danger">
+              <i class="fa fa-trash"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

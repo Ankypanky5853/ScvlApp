@@ -1,0 +1,77 @@
+.form-group .form-control{
+	border:1px solid #afafaf !important;
+	border-radius: 3px !important;
+	background-color: #f3f1f1;
+	color: #000;
+}
+.form-group .label2, .form-group .label3{
+display: inline-block;
+text-align: right;
+font-weight:600 !important;
+line-height: 24px;
+font-size: 12px;
+color: #222 !important;
+}
+.form-group .form-control2{
+	border:1px solid #cdcbcb !important;
+	border-radius: 3px !important;
+	background-color: #fbfbfb;
+	line-height: 18px;
+	min-width: 170px;
+	font-size: 12px !important;
+	font-weight: 600;
+	color: #666;
+	padding: 8px 9px;
+	/*height: 20px;*/
+}
+.form-group .form-control2 option{
+	font-size: 12px !important;
+	/*font-weight: 600;*/
+	color: #333;
+	padding: 8px 12px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: all 100ms ease-out;
+	-webkit-transition:all 100ms ease-out;
+	-moz-transition:all 100ms ease-out;
+	-ms-transition:all 100ms ease-out;
+	-o-transition:all 100ms ease-out;
+}
+.form-group .form-control3{
+	border:1px solid #cdcbcb !important;
+	border-radius: 3px !important;
+	background-color: #fbfbfb;
+	line-height: 18px;
+	font-size: 12px !important;
+	font-weight: 600;
+	width: 100%;
+	color: #666;
+	padding: 8px 9px;
+	/*height: 20px;*/
+}
+.form-group select.form-control3 option{
+	font-size: 12px !important;
+	/*font-weight: 600;*/
+	color: #333;
+	padding: 8px 12px;
+	cursor: pointer;
+	white-space: nowrap;
+	transition: all 100ms ease-out;
+	-webkit-transition:all 100ms ease-out;
+	-moz-transition:all 100ms ease-out;
+	-ms-transition:all 100ms ease-out;
+	-o-transition:all 100ms ease-out;
+}
+.form-group select.form-control3 option:hover{
+background: #ccc;
+}
+/*.form-group label{
+	margin-top: 5px !important;
+	font-weight: 400 !important;
+	text-transform: capitalize;
+}
+*/
+.form-group .form-control:focus { 
+    background-color: #fafafa !important;
+    border-color: #616f96 !important;
+}

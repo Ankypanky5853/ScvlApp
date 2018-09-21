@@ -1,0 +1,274 @@
+<app-header></app-header>
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+	    <li class="breadcrumb-item"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+	    <li class="breadcrumb-item"><a [routerLink]="['/operations']">Operations</a></li>
+	    <li class="breadcrumb-item"><a [routerLink]="['/los']">LOS</a></li>
+	    <li class="breadcrumb-item active" aria-current="page">Loan Applications</li>
+	</ol>
+</nav>
+<section class="con_body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="list-group">
+					<h6 class="bg-dark-blue">LOS</h6>
+					<a [routerLink]="['/village-survey']" class="list-group-item list-group-item-action">Village Survey</a>
+					<a [routerLink]="['/center']" class="list-group-item list-group-item-action">Centre</a>
+					<a [routerLink]="['/cgt']" class="list-group-item list-group-item-action">CGT</a>
+					<a [routerLink]="['/grt']" class="list-group-item list-group-item-action">GRT</a>
+					<a [routerLink]="['/member']" class="list-group-item list-group-item-action">Member</a>
+					<a [routerLink]="['/loanApplication']" class="list-group-item list-group-item-action active">Loan Application</a>
+					<a [routerLink]="['/loanprocess']" class="list-group-item list-group-item-action">Loan Process</a>
+					<a [routerLink]="['/loanapproval']" class="list-group-item list-group-item-action">Loan Approval</a>
+					<a [routerLink]="['/loanFeesCollection']" class="list-group-item list-group-item-action">Loan Fees Collection</a>
+					<a [routerLink]="['/disbursement']" class="list-group-item list-group-item-action">Disbursement</a>
+				</div>
+			</div>
+			<div class="col-md-10">
+				<div class="card">
+					<div class="card-header bg-dark-blue">
+						<h6 class="card-title">Loan Application</h6>
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-12 m-b-20">
+								<form style="width: 100%; display: block;">
+									<div class="row">
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Enter Center Code</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="form-group">
+												<label>Enter Client Name</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+										<div class="col-md-4">
+											<button type="button" class="btn btn-success btn-sm m-t-20">Proceed Application</button>
+										</div>
+									</div>
+								</form>
+							</div>
+							<div class="col-md-3 p-r-5">
+								<div class="card">
+									<div class="card-body p-l-10 p-r-10">
+										<div class="user_pic text-center m-t-5">
+											<img src="../../assets/img/clients/1.jpg" style="max-height: 140px;">
+										</div>
+										<div class="profile-personal-info m-t-20">
+											<div class="row m-b-10">
+												<div class="col-md-5">
+													<h5 class="f-w-500">Client Name</h5>
+												</div>
+												<div class="col-md-7">
+													<span class="v-light">Mamta Devi</span>
+												</div>
+											</div>
+											<div class="row m-b-10">
+												<div class="col-md-5">
+													<h5 class="f-w-500">Branch Name</h5>
+												</div>
+												<div class="col-md-7">
+													<span class="v-light">Kota [123445]</span>
+												</div>
+											</div>
+											<div class="row m-b-10">
+												<div class="col-md-5">
+													<h5 class="f-w-500">Client Code</h5>
+												</div>
+												<div class="col-md-7">
+													<span class="v-light">A00125:25</span>
+												</div>
+											</div>
+											<div class="row m-b-10">
+												<div class="col-md-5">
+													<h5 class="f-w-500">CB Date</h5>
+												</div>
+												<div class="col-md-7">
+													<span class="v-light">10/08/2018</span>
+												</div>
+											</div>
+											<div class="row m-b-10">
+												<div class="col-md-5">
+													<h5 class="f-w-500">CB Status</h5>
+												</div>
+												<div class="col-md-7">
+													<span class="v-light text-success">PASS</span>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-9 p-l-5">
+								<div class="card">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-md-12 m-b-15 b-b-1">
+												<h6 class="sub_heading b_b_blue">KYC Details</h6>
+												<div class="row">
+													<div class="col-md-12">
+														<table class="table">
+															<tr>
+																<td>ID Proof</td>
+																<td>Aadhaar Card</td>
+																<td>8652 3652 7545</td>
+															</tr>
+															<tr>
+																<td>Address Proof</td>
+																<td>Aadhaar Card</td>
+																<td>8652 3652 7545</td>
+															</tr>
+														</table>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 m-b-15 b-b-1">
+												<h6 class="sub_heading b_b_blue">Bank Details</h6>
+												<div class="row">
+													<div class="col-md-12">
+														<table class="table">
+															<tr>
+																<td>A/c Type</td>
+																<td>Indvidual</td>
+																<td>A/c Number</td>
+																<td>00023568945869</td>
+															</tr>
+															<tr>
+																<td>IFSC Code</td>
+																<td>SBIN0010322</td>
+																<td>Bank Name</td>
+																<td>State Bank Of India</td>
+															</tr>
+															<tr>
+																<td>Branch</td>
+																<td>Anaanaa Bus Stand</td>
+																<td>&nbsp;</td>
+																<td>&nbsp;</td>
+															</tr>
+														</table>
+													</div>
+													<div class="col-md-12 text-right m-b-10">
+														<button type="button" class="btn btn-danger btn-sm">Update</button>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12 m-b-10 m-t-10">
+												<div class="float-right">
+													<button class="btn btn-primary btn-sm" (click)="toggle()">Show Loan History</button>
+												</div>
+											</div>
+											<div class="col-md-12 m-b-15 b-b-1" *ngIf="show">
+												<h6 class="sub_heading b_b_blue">Loan History Details</h6>
+												<div class="row">
+													<div class="col-md-12">
+														<table class="table">
+															<tr>
+																<th>Loan Code</th>
+																<th>Disbursement Date</th>
+																<th>Disbursement Amount</th>
+																<th>PR Outstanding</th>
+															</tr>
+															<tbody>
+																<tr>
+																	<td>A001:022:001</td>
+																	<td>18/02/2013</td>
+																	<td>14000</td>
+																	<td>0</td>
+																</tr>
+																<tr>
+																	<td>A001:022:002</td>
+																	<td>27/04/2015</td>
+																	<td>20000</td>
+																	<td>0</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<h6 class="sub_heading b_b_blue">Loan Details</h6>
+												<form class="m-t-15" method="post">
+													<div class="row">
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Loan Code</label>
+																<input type="text" class="form-control" value="c001:002:003" readonly name="ClientAmountApplied">
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Date of proposal</label>
+																<input type="date" class="form-control" name="ClientAmountRecommended">
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Product</label>
+																<select class="form-control" name="ClientProductType">
+																	<option value="Product1">Product1</option>
+																	<option value="Product2">Product2</option>
+																	<option value="Product3">Product3</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Purpose</label>
+																<select class="form-control" name="ClientProductType">
+																	<option value="Product1">Purpose 1</option>
+																	<option value="Product2">Purpose 2</option>
+																	<option value="Product3">Purpose 3</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Staff Name/Code</label>
+																<select class="form-control" name="ClientProductType">
+																	<option value="Product1">Staff 1</option>
+																	<option value="Product2">Staff 2</option>
+																	<option value="Product3">Staff 3</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+																<label>Recommended Ammount</label>
+																<select class="form-control" name="ClientProductType">
+																	<option value="20000">20000</option>
+																	<option value="30000">30000</option>
+																	<option value="35000">35000</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-4">
+															<div class="form-group">
+															<label>Recommended Date</label>
+															<input type="date" class="form-control" name="ClientRecommendedDate">
+															</div>
+														</div>
+														<div class="col-md-12 m-t-15">
+															<div class="float-right">
+																<button type="button" class="btn btn-success btn-sm">Submit</button>
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

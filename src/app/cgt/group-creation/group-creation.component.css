@@ -1,0 +1,26 @@
+.member_list{
+    width: 100%;
+    float: left;
+    clear: both;
+}
+.member_list ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.member_list ul li{
+padding: 8px 8px 0px 8px;
+margin-bottom: 5px;
+background: #f1f1f1;
+border-radius: 2px;
+}
+.member_list ul .selected{
+    background: #de701f;
+    color: #fff;
+}
+.member_list ul li .member .member_name{
+font-size: 14px;
+margin-bottom: 0px;
+}
+.checkbox label::before, .checkbox label::after{
+    top: 2px;
+}

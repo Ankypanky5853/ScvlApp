@@ -1,0 +1,298 @@
+<div class="row">
+  <div class="col-md-12 header_section">
+    <div class="row">
+      <div class="col-md-6 text-left">
+        <h6>Add New Member Details </h6>
+        <p class="sub_title"><strong>Center Name</strong> - Kota AB [B001:002]</p>
+      </div>
+      <div class="col-md-6 text-right">
+        <p class="sub_title"><strong>Branch Name</strong> - Kota A [B001]</p>
+        <p class="sub_title"><strong>CGT Period</strong> - Sep 7, 2018 to Sep 21, 2018</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <form action="" method="post" style="width: 100%;">
+      <div class="row p-b-15">
+        <div class="col-md-12">
+          <h6 class="sub_heading b_b_blue">Basic Details</h6>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="MemberFirstName" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Middle Name</label>
+            <input type="text" name="MiddleName" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="MemberLastName" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Gender</label>
+            <select class="form-control" name="MemberGender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Date Of Birth</label>
+            <input type="date" name="MemberDateOfBirth" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Age</label>
+            <input type="text" name="MemberAge" class="form-control"
+              readonly>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Marital Status</label>
+            <select class="form-control" name="MaritalStatus">
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
+              <option value="Divorced">Divorced</option>
+              <option value="Widowed">Widowed</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Husband Name</label>
+            <input type="text" name="MemberSpouseName" class="form-control">
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Father Name</label>
+            <input type="text" name="MemberFatherName" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="checkbox checkbox-primary p-t-25">
+            <input type="checkbox" name="IsFatherAlive" id="FatherLive">
+            <label for="FatherLive">Is Father Alive</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Mother Name</label>
+            <input type="text" name="MemberMotherName" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="checkbox checkbox-primary p-t-25">
+            <input type="checkbox" name="IsMotherAlive" id="MotherLive">
+            <label for="MotherLive">Is Mother Alive</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Mobile No.</label>
+            <input type="text" name="MemberMobileNumber" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Mobile Owned By</label>
+            <select class="form-control" name="MemberMobileOwned">
+              <option value="Father">Father</option>
+              <option value="Husband">Husband</option>
+              <option value="Himself">HerSelf</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Member Photo</label>
+            <input type="file" class="form-control" name="MemberPhoto">
+          </div>
+        </div>
+      </div>
+      <div class="row p-b-15">
+        <div class="col-md-12">
+          <h6 class="sub_heading b_b_blue">Address Details</h6>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Address line 1</label>
+            <input type="text" name="MemberAddressLine1" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Address line 2</label>
+            <input type="text" name="MemberAddressLine2" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>State</label>
+            <select name="MemberState" class="form-control">
+              <option *ngFor="let item of StateList" [value]="item.Value">{{item.Text}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>District</label>
+            <select name="MemberDistrict" class="form-control">
+              <option *ngFor="let item of DistrictList" [value]="item.Value">{{item.Text}}</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Sub District / Tehsil</label>
+            <select name="MemberSubDistrict" class="form-control">
+              <option *ngFor="let item of SubDistrictList" [value]="item.Value">{{item.Text}}</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Pin Code</label>
+            <input type="text" name="MemberPincode" class="form-control">
+          </div>
+        </div>
+      </div>
+      <div class="row p-b-15">
+        <div class="col-md-12">
+          <h6 class="sub_heading b_b_blue">KYC Details</h6>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>ID Proof</label>
+            <input type="text" name="MemberIDProof" class="form-control"
+              value="Aadhaar Card" readonly>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Id Proof No.</label>
+            <input type="text" name="MemberIdProofNumber" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>ID Proof Front</label>
+            <input type="file" name="MemberIdProofFront" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>ID Proof Back</label>
+            <input type="file" name="MemberIdProofBack" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Address Proof</label>
+            <select class="form-control" name="MemberAddressProof">
+              <option value="Voter ID">Voter ID</option>
+              <option value="MNREGA Card">MNREGA Card</option>
+              <option value="Ration Card">Ration Card</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Address Proof No.</label>
+            <input type="text" name="MemberAddressProofNumber"
+              class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Address Proof Front</label>
+            <input type="file" name="MemberAddressProofFront" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Address Proof Back</label>
+            <input type="file" name="MemberAddressProofBack" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Bank Account No.</label>
+            <input type="text" name="MemberBankAccountNumber" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Bank Name</label>
+            <input type="text" name="MemberBankName" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Branch Name</label>
+            <input type="text" name="MemberBankBranchName" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Bank IFSC Code</label>
+            <input type="text" name="MemberBankIfscCode" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Bank Passbook Front</label>
+            <input type="file" name="MemberBankPassbookFront" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Bank Passbook Back</label>
+            <input type="file" name="MemberBankPassbookBack" class="form-control">
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Select Staff</label>
+            <select class="form-control" name="Staff">
+              <option>Ram</option>
+              <option>Shyam</option>
+            </select>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-group">
+            <label>Select Partner</label>
+            <select class="form-control" name="Partner">
+              <option>Kotak Bank</option>
+              <option>SVCL</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row p-b-15">
+        <div class="col-md-12 mb-3">
+          <div class="float-right">
+            <button type="button" class="btn btn-default btn-sm" [routerLink]="['./../MembersList']">Cancel</button>
+            <button type="submit" class="btn btn-primary btn-sm">Save</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

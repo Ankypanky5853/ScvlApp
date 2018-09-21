@@ -1,0 +1,55 @@
+<app-header></app-header>
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a [routerLink]="['/dashboard']">Dashboard</a></li>
+		<li class="breadcrumb-item"><a [routerLink]="['/operations']">Operations</a></li>
+		<li class="breadcrumb-item"><a [routerLink]="['/los']">LOS</a></li>
+		<li class="breadcrumb-item"><a [routerLink]="['/grt']">GRT</a></li>
+		<li class="breadcrumb-item active" aria-current="page">GRT List</li>
+	</ol>
+</nav>
+<section class="con_body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="list-group">
+					<h6 class="bg-dark-blue">LOS</h6>
+					<a [routerLink]="['/village-survey']" class="list-group-item list-group-item-action">Village Survey</a>
+					<a [routerLink]="['/center']" class="list-group-item list-group-item-action">Centre</a>
+					<a [routerLink]="['/cgt']" class="list-group-item list-group-item-action">CGT</a>
+					<a [routerLink]="['/grt']" class="list-group-item list-group-item-action active">GRT</a>
+					<a [routerLink]="['/member']" class="list-group-item list-group-item-action">Member</a>
+					<a [routerLink]="['/loanApplication']" class="list-group-item list-group-item-action">Loan Application</a>
+					<a [routerLink]="['/loanprocess']" class="list-group-item list-group-item-action">Loan Process</a>
+					<a [routerLink]="['/loanapproval']" class="list-group-item list-group-item-action">Loan Approval</a>
+					<a [routerLink]="['/loanFeesCollection']" class="list-group-item list-group-item-action">Loan Fees Collection</a>
+					<a [routerLink]="['/disbursement']" class="list-group-item list-group-item-action">Disbursement</a>
+				</div>
+			</div>
+			<div class="col-md-10 content-container">
+				<div class="card">
+					<div class="card-body p-0">
+						<div class="row">
+							<div class="col-md-12">
+								<ul class="list-inline">
+									<li class="list-inline-item tabs_list"><a class="text-center tablinks active" [routerLink]="['./GrtList']"
+										 routerLinkActive="active">GRT List</a></li>
+									<li class="list-inline-item tabs_list"><a class="text-center tablinks" [routerLink]="['./MembersList']"
+										 routerLinkActive="active">Members List</a></li>
+									<li class="list-inline-item tabs_list">
+										<a class="text-center tablinks" [routerLink]="['./GrtForm']" routerLinkActive="active">GRT Form</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="tab-body">
+							<div class="tab" id="tab1">
+								<router-outlet></router-outlet>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

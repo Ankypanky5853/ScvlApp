@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-md-12 header_section">
+    <div class="float-right">
+      <button class="btn btn-primary btn-sm" type="button" [routerLink]="['./../AddCenter']"><i class="fa fa-plus"></i>
+        Add New</button>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <table class="table table-stripped">
+      <thead>
+        <tr>
+          <th>Sr. No.</th>
+          <th>Centre Name</th>
+          <th>Centre Code</th>
+          <th>Branch Name</th>
+          <th>Village Name</th>
+          <th>Formation Date</th>
+          <th>Staff Name</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor='let centres of CentreData'>
+          <td>{{centres.id}}</td>
+          <td>{{centres.cname}}</td>
+          <td>{{centres.ccode}}</td>
+          <td>{{centres.vname}}</td>
+          <td>{{centres.bname}}</td>
+          <td>{{centres.time}}</td>
+          <td>{{centres.staff}}</td>
+          <td>
+            <a [routerLink]="['./../CenterManagement']" class="d_done"><i class="fa fa-eye"></i></a>
+            <a href="javascript:;" class="d_done text-danger"><i class="fas fa-exchange-alt"></i></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

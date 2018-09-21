@@ -1,0 +1,16 @@
+.comment_card{
+    padding: 15px;
+    background: #cccccc38;
+    margin-bottom: 15PX;
+    border: 1px solid #cccccc82;
+    border-radius: 5px;
+}
+.comment_card p{
+    margin-bottom: 0px;
+}
+.comment_time p{
+    text-align: right;
+    font-style: italic;
+    color: #4e4949;
+    font-size: 12px;
+}

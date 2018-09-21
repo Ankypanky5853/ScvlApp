@@ -1,0 +1,178 @@
+<header>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="float-left">
+					<a class="navbar-brand" [routerLink]="['/dashboard']"><img src="../assets/img/logo/logo.png" style="max-width: 110px;"></a>
+				</div>
+				<div class="float-right">
+					<ul class="navbar-nav mr-auto" >
+						<li class="nav-item dropdown" ngbDropdown> 
+							<a class="nav-link dropdown-toggle user_details" href="javascript:;" id="dropdownBasic1" ngbDropdownToggle>
+								<span class="user_name">Sanjay Sharma</span>
+								<div class="user_profile_pic">
+									<img src="../assets/img/users/user1.jpg" class="img img-fluid circle">
+								</div>
+							</a>
+							<div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="dropdown-menu user_details_dropdown">
+								<div class="user-card">
+									<div class="row">
+										<div class="col-8">
+											<p>Staff id: 17253</p>
+											<p>Branch Code: 123</p>
+										</div>
+										<div class="col-4">
+											<div class="user_pic">
+												<img src="../assets/img/users/user1.jpg" class="img img-fluid">
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="nav-sub-menu">
+									<ul class="sub-nav">
+										<li>
+											<a [routerLink]="['/profile']" class="">
+												<i class="fa fa-user link_icon"></i>
+												<span class="menu-span">Profile</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/performace']">
+												<i class="far fa-chart-bar link_icon"></i>
+												<span class="menu-span">Performance</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/setting']">
+												<i class="fa fa-cogs link_icon"></i>
+												<span class="menu-span">Setting</span>
+											</a>
+										</li>
+										<li>
+											<a [routerLink]="['/logout']">
+												<i class="fa fa-sign-out-alt link_icon"></i>
+												<span class="menu-span">Logout</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</li>
+					</ul>							
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="menu_bottom bg-dark-blue">
+	</div>
+</header>
+
+<section class="con_body">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="main_btn btn-1">
+					<div class="m-widget14">
+						<a [routerLink]="['/village-survey']" class="grid_item">
+							<i class="grid_icon fas fa-users"></i>
+							<span class="m-nav-grid__text">
+								JLG
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="main_btn btn-2">
+					<div class="m-widget14">
+						<a [routerLink]="['/IBL']" class="grid_item">
+							<i class="grid_icon fa fa-user"></i>
+							<span class="m-nav-grid__text">
+								IBL
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="main_btn btn-3">
+					<div class="m-widget14">
+						<a [routerLink]="['/housingloan']" class="grid_item">
+							<i class="grid_icon fa fa-home"></i>
+							<span class="m-nav-grid__text">
+								Housing Loan
+							</span>
+						</a>
+					</div>
+				</div>
+				 <div class="main_btn btn-4">
+					<div class="m-widget14">
+						<a [routerLink]="['/rikshaloan']" class="grid_item">
+							<i class="grid_icon fas fa-shuttle-van"></i>
+							<span class="m-nav-grid__text">
+								E-riksha Loan
+							</span>
+						</a>
+					</div>
+				</div>
+				<!--<div class="main_btn btn-5">
+					<div class="m-widget14">
+						<a [routerLink]="['/loan']" class="grid_item">
+							<i class="grid_icon fa fa-home"></i>
+							<span class="m-nav-grid__text">
+								Housing Loan
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="main_btn btn-6">
+					<div class="m-widget14">
+						<a [routerLink]="['/loan']" class="grid_item">
+							<img src="../assets/img/icon/riksha.svg" height="35">
+							<span class="m-nav-grid__text">
+								E-Riksha
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="main_btn btn-7">
+					<div class="m-widget14">
+						<a [routerLink]="['/partnership']" class="grid_item">
+							<i class="grid_icon far fa-handshake"></i>
+							<span class="m-nav-grid__text">
+								Partnership
+							</span>
+						</a>
+					</div>
+				</div>
+				<div class="main_btn btn-8">
+					<div class="m-widget14">
+						<a [routerLink]="['/reports']" class="grid_item">
+							<i class="grid_icon far fa-clipboard"></i>
+							<span class="m-nav-grid__text">
+								Reports
+							</span>
+						</a>
+					</div>
+				</div>									
+				<div class="main_btn btn-9">
+					<div class="m-widget14">
+						<a [routerLink]="['/utilities']" class="grid_item">
+							<i class="grid_icon fa fa-cog"></i>
+							<span class="m-nav-grid__text">
+								Utilities
+							</span>
+						</a>
+					</div>
+				</div>
+
+				<div class="main_btn btn-10">
+					<div class="m-widget14">
+						<a [routerLink]="['/admin']" class="grid_item">
+							<i class="grid_icon far fa-user-circle"></i>
+							<span class="m-nav-grid__text">
+								Admin
+							</span>
+						</a>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</section>

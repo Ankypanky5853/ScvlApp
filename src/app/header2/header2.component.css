@@ -1,0 +1,71 @@
+#navbar_menu{
+	    position: absolute;
+    width: 90%;
+    right: 0px;
+    top: 0px;
+    background: #070607f5;
+}
+.close_btn{
+	box-shadow: none;
+	border-color: #CCC;
+	float: right;
+	clear: both;
+	background-color: none;
+	display: block;
+}
+.navbar-nav{
+	width: 100%;
+	margin: 0px;
+}
+#navbar_menu .dropdown-menu .nav-sub-menu{
+	width: 100%;
+	background: none;
+	box-shadow: none !important;
+}
+@media (min-width:576px){
+#navbar_menu{
+	    position: absolute;
+    width: 90%;
+    right: 0px;
+    top: 0px;
+    background: #070607f5;
+}
+
+.close_btn{
+	box-shadow: none;
+	border-color: #CCC;
+	display: block;
+}
+}
+
+@media (min-width:768px){
+#navbar_menu{
+	    position: absolute;
+    width: 90%;
+    right: 0px;
+    top: 0px;
+    background: #070607f5;
+}
+}
+
+@media (min-width:992px){
+	#navbar_menu{
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    background: #34bfa3;
+}
+	}
+
+	@media (min-width:1200px){
+
+		#navbar_menu{
+    position: relative;
+    max-width: 80%;
+    margin: 0 auto;
+    background: #34bfa3;
+}
+.close_btn{
+	display: none;
+}
+	}

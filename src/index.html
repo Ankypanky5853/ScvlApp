@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Svclapp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/assets/css/pace-theme-flash.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSA`wiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.4.1/cropper.min.css" type="text/css" rel="stylesheet"/>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+  <script type="text/javascript" src="assets/js/jquery.js"></script>
+  <script type="text/javascript" src="https://cdn.rawgit.com/igorlino/elevatezoom-plus/1.1.6/src/jquery.ez-plus.js"></script>
+
+ 
+  <script type="text/javascript" src="assets/js/jqueryui.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.iviewer.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.4.1/cropper.min.js"></script>
+  <link rel="stylesheet" href="assets/css/jquery.iviewer.css" />
+</head>
+<style type="text/css">
+  .carousel-indicators li {
+    background: #ccc;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+  }
+
+  body {
+    color: #000;
+  }
+
+  .pace .pace-activity {
+    width: 59px;
+    height: 71px;
+    right: 50%;
+    top: 50%
+  }
+
+  .carousel-indicators li.active {
+    background: #34bfa3;
+  }
+</style>
+
+<body>
+  <app-root></app-root>
+
+
+
+  <script type="text/javascript" src="assets/js/pace.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      $("#img_01").ezPlus();
+      $('.form-group .form-control').focus(function () {
+        $(this).parent().addClass('active');
+      });
+      $('.form-group .form-control').blur(function () {
+        // $(this).parent().removeClass('active');
+
+        if ($(this).val().length === 0) {
+          $(this).parents().removeClass('active');
+        }
+      });
+
+      $('.form-group .label').click(function () {
+        $(this).next().next().focus();
+      });
+
+      $('.theme .toggle_btn').click(function () {
+        $('.theme').toggleClass('open');
+      })
+    });
+
+
+    $(document).ready(function () {
+      $('.theme1').click(function () {
+        $('.bg-light-blue').removeClass('bg-light-blue').addClass('bg-dark-blue');
+        $('.bg-dark-orange').removeClass('bg-dark-orange').addClass('bg-dark-blue');
+        $('.bg-dark-red').removeClass('bg-dark-red').addClass('bg-dark-blue');
+        $('.user_details_dropdown .nav-sub-menu ul li a:hover').css('background', 'rgb(58, 83, 105)')
+      });
+      $('.theme2').click(function () {
+        $('.bg-dark-blue').removeClass('bg-dark-blue').addClass('bg-dark-orange')
+        $('.bg-light-blue').removeClass('bg-light-blue').addClass('bg-dark-orange')
+        $('.bg-dark-red').removeClass('bg-dark-red').addClass('bg-dark-orange')
+        $('.user_details_dropdown .nav-sub-menu ul li a:hover').css('background', '#d65b00')
+      });
+      $('.theme3').click(function () {
+        $('.bg-dark-blue').removeClass('bg-dark-blue').addClass('bg-dark-red')
+        $('.bg-light-blue').removeClass('bg-light-blue').addClass('bg-dark-red')
+        $('.bg-dark-orange').removeClass('bg-dark-orange').addClass('bg-dark-red');
+        $('.user_details_dropdown .nav-sub-menu ul li a:hover').css('background', '#ce2026 !important')
+      });
+      $('.theme4').click(function () {
+        $('.bg-dark-blue').removeClass('bg-dark-blue').addClass('bg-light-blue')
+        $('.bg-dark-red').removeClass('bg-dark-red').addClass('bg-light-blue')
+        $('.bg-dark-orange').removeClass('bg-dark-orange').addClass('bg-light-blue');
+        $('.user_details_dropdown .nav-sub-menu ul li a:hover').css('background', '!important')
+
+      });
+    });
+  </script>
+</body>
+
+</html>

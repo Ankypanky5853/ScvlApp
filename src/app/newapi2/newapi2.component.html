@@ -1,0 +1,101 @@
+<app-header></app-header>
+<section class="con_body">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h4 class="page-heading">Create New Api</h4>
+			</div>
+			<div class="col-md-6 m-auto">
+				<div class="card">
+					<div class="card-body">
+						<form method="post" action="">
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Project Name</label>
+										<input type="text" name="project_name" class="form-control" placeholder="Project Name">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Controller Name</label>
+										<input type="text" name="controller_name" class="form-control" placeholder="Controller Name">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Action Name</label>
+										<input type="text" name="action_name" class="form-control" placeholder="Action Name">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Api URL</label>
+										<input type="text" name="api_url" class="form-control" placeholder="like :  https://svclmis.in/">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Permission of Department</label>
+										<Select name="department_permission" class="form-control">
+											<option>A</option>
+											<option>B</option>
+											<option>c</option>
+										</Select>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Permission Needed</label>
+										<Select name="permission_needed" class="form-control">
+											<option>A</option>
+											<option>B</option>
+											<option>c</option>
+										</Select>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>HTTP Actiion Type</label>
+										<Select name="http_action" class="form-control">
+											<option>A</option>
+											<option>B</option>
+											<option>c</option>
+										</Select>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Is Api Active</label>
+										<Select name="api_status" class="form-control">
+											<option>Yes</option>
+											<option>No</option>
+										</Select>
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Api Version</label>
+										<input type="text" name="api_version" class="form-control" placeholder="like: 10.101">
+									</div>
+								</div>
+								<div class="col-md-12">
+									<div class="form-group">
+										<label>Api Description</label>
+										<textarea class="form-control" rows="3" placeholder="Api Description"></textarea>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 text-right">
+									<button class="btn btn-default" type="reset">Cancel</button>
+									<button class="btn btn-primary" type="Submit">Submit</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
